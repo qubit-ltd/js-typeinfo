@@ -3,8 +3,8 @@
 [![npm package](https://img.shields.io/npm/v/@qubit-ltd/typeinfo.svg)](https://npmjs.com/package/@qubit-ltd/typeinfo)
 [![License](https://img.shields.io/badge/License-Apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![中文文档](https://img.shields.io/badge/文档-中文版-blue.svg)](README.zh_CN.md)
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Haixing-Hu/js-typeinfo/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/Haixing-Hu/js-typeinfo/tree/master)
-[![Coverage Status](https://coveralls.io/repos/github/Haixing-Hu/js-typeinfo/badge.svg?branch=master)](https://coveralls.io/github/Haixing-Hu/js-typeinfo?branch=master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/qubit-ltd/js-typeinfo/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/qubit-ltd/js-typeinfo/tree/master)
+[![Coverage Status](https://coveralls.io/repos/github/qubit-ltd/js-typeinfo/badge.svg?branch=master)](https://coveralls.io/github/qubit-ltd/js-typeinfo?branch=master)
 
 
 [typeinfo] is a lightweight JavaScript library that extends the functionality
@@ -809,7 +809,7 @@ To set up the project for development:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Haixing-Hu/js-typeinfo.git
+git clone https://github.com/qubit-ltd/js-typeinfo.git
 cd js-typeinfo
 
 # Install dependencies
@@ -849,6 +849,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
-[typeinfo]: https://github.com/Haixing-Hu/js-typeinfo
+[typeinfo]: https://github.com/qubit-ltd/js-typeinfo
 [global object]: https://developer.mozilla.org/en-US/docs/Glossary/Global_object
 [Standard built-in objects]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects

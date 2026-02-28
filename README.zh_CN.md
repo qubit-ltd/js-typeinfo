@@ -3,8 +3,8 @@
 [![npm package](https://img.shields.io/npm/v/@qubit-ltd/typeinfo.svg)](https://npmjs.com/package/@qubit-ltd/typeinfo)
 [![License](https://img.shields.io/badge/License-Apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![English Document](https://img.shields.io/badge/Document-English-blue.svg)](README.md)
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Haixing-Hu/js-typeinfo/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/Haixing-Hu/js-typeinfo/tree/master)
-[![Coverage Status](https://coveralls.io/repos/github/Haixing-Hu/js-typeinfo/badge.svg?branch=master)](https://coveralls.io/github/Haixing-Hu/js-typeinfo?branch=master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/qubit-ltd/js-typeinfo/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/qubit-ltd/js-typeinfo/tree/master)
+[![Coverage Status](https://coveralls.io/repos/github/qubit-ltd/js-typeinfo/badge.svg?branch=master)](https://coveralls.io/github/qubit-ltd/js-typeinfo?branch=master)
 
 [typeinfo] 是一个轻量级的JavaScript库，它扩展了`typeof`操作符的功能，允许获取
 JavaScript 变量更精确可靠的类型信息。它为最新的 ECMAScript 标准提供了增强支持，并为您的项目
@@ -644,7 +644,7 @@ const proxy = new Proxy(target, handler);
 
 ```bash
 # 克隆仓库
-git clone https://github.com/Haixing-Hu/js-typeinfo.git
+git clone https://github.com/qubit-ltd/js-typeinfo.git
 cd js-typeinfo
 
 # 安装依赖
@@ -684,6 +684,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
-[typeinfo]: https://github.com/Haixing-Hu/js-typeinfo
+[typeinfo]: https://github.com/qubit-ltd/js-typeinfo
 [global object]: https://developer.mozilla.org/zh-CN/docs/Glossary/Global_object
 [Standard built-in objects]: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects

@@ -6,12 +6,12 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Haixing-Hu/js-typeinfo.git"
+    "url": "git+https://github.com/qubit-ltd/js-typeinfo.git"
   },
   "bugs": {
-    "url": "https://github.com/Haixing-Hu/js-typeinfo/issues"
+    "url": "https://github.com/qubit-ltd/js-typeinfo/issues"
   },
-  "homepage": "https://github.com/Haixing-Hu/js-typeinfo",
+  "homepage": "https://github.com/qubit-ltd/js-typeinfo",
   "main": "dist/typeinfo.min.cjs",
   "module": "dist/typeinfo.min.mjs",
   "exports": {
