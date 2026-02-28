@@ -126,4 +126,13 @@ describe('Test the `typeInfo()` function for function values', () => {
       expect(result.isWebApi).toBe(false);
     });
   }
+
+  test('function with null constructor', () => {
+    const f = function () {};
+    Object.defineProperty(f, 'constructor', { value: null, configurable: true });
+    const result = typeInfo(f);
+    expect(result.subtype).toBe('Function');
+    expect(result.category).toBe('function');
+  });
 });
+

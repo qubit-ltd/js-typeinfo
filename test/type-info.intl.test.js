@@ -289,4 +289,13 @@ describe('Test the `typeInfo()` function for objects under the Intl namespace', 
       expect(result.constructor).toBeDefined();
     });
   }
+
+  test('Intl object with null constructor', () => {
+    const collator = new Intl.Collator('zh');
+    Object.defineProperty(collator, 'constructor', { value: null, configurable: true });
+    const result = typeInfo(collator);
+    expect(result.subtype).toBe('');
+    expect(result.category).toBe('intl');
+  });
 });
+

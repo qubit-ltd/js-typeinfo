@@ -9,8 +9,6 @@
 import { runInNewContext } from 'node:vm';
 import typeInfo from '../src';
 
-/* eslint-disable no-undef */
-
 /**
  * Unit test of the `typeInfo()` function.
  *

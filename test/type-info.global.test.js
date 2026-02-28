@@ -25,7 +25,7 @@ describe('Test the `typeInfo()` function for global object', () => {
       isBuiltIn: true,
       isWebApi: false,
     };
-    /* eslint-disable no-undef */
+
     expect(typeInfo(globalThis)).toEqual(expected);
   });
 

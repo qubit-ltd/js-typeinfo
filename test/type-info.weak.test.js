@@ -10,8 +10,6 @@ import { WEAKMAP_EXISTS, WEAKREF_EXISTS, WEAKSET_EXISTS } from '@qubit-ltd/type-
 import { runInNewContext } from 'node:vm';
 import typeInfo from '../src';
 
-/* eslint-disable no-undef */
-
 /**
  * Unit test of the `typeInfo()` function.
  *

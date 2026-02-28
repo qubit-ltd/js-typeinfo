@@ -293,6 +293,7 @@ function typeInfo(value) {
         };
       }
       return getObjectTypeInfo(value);
+    /* istanbul ignore next */
     default:
       // should not reach here unless new types are added to JS
       return {

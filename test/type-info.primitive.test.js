@@ -10,8 +10,6 @@ import { BIGINT_EXISTS, SYMBOL_EXISTS, SYMBOL_TO_STRING_TAG_EXISTS } from '@qubi
 import { runInNewContext } from 'node:vm';
 import typeInfo from '../src';
 
-/* eslint-disable no-undef */
-
 /**
  * Unit test of the `typeInfo()` function.
  *
