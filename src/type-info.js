@@ -240,7 +240,6 @@ import getObjectTypeInfo from './get-object-type-info';
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
  */
 function typeInfo(value) {
-  // special deal with `null` value, since `typeof null` returns 'object'
   if (value === null) {
     return {
       type: 'null',
@@ -250,34 +249,8 @@ function typeInfo(value) {
       isWebApi: false,
     };
   }
-  if (isGlobalObject(value)) {
-    return {
-      type: 'object',
-      subtype: 'GlobalObject',
-      category: 'global',
-      isPrimitive: false,
-      isBuiltIn: true,
-      isWebApi: false,
-      constructor: value.constructor,
-    };
-  }
   const type = typeof value;
-  // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#description
   switch (type) {
-    case 'object':
-      // including non-null objects
-      return getObjectTypeInfo(value);
-    case 'function':
-      // including 'Function', 'AsyncFunction', 'GeneratorFunction',
-      // 'AsyncGeneratorFunction'
-      return {
-        type: 'function',
-        subtype: value.constructor.name,
-        category: 'function',
-        isPrimitive: false,
-        isBuiltIn: true,
-        isWebApi: false,
-      };
     case 'number':
     case 'bigint':
       return {
@@ -287,11 +260,41 @@ function typeInfo(value) {
         isBuiltIn: true,
         isWebApi: false,
       };
-    case 'undefined':
-    case 'boolean':
     case 'string':
+    case 'boolean':
     case 'symbol':
+    case 'undefined':
+      return {
+        type,
+        category: type,
+        isPrimitive: true,
+        isBuiltIn: true,
+        isWebApi: false,
+      };
+    case 'function':
+      return {
+        type: 'function',
+        subtype: value.constructor?.name || 'Function',
+        category: 'function',
+        isPrimitive: false,
+        isBuiltIn: true,
+        isWebApi: false,
+      };
+    case 'object':
+      if (isGlobalObject(value)) {
+        return {
+          type: 'object',
+          subtype: 'GlobalObject',
+          category: 'global',
+          isPrimitive: false,
+          isBuiltIn: true,
+          isWebApi: false,
+          constructor: value.constructor,
+        };
+      }
+      return getObjectTypeInfo(value);
     default:
+      // should not reach here unless new types are added to JS
       return {
         type,
         category: type,
