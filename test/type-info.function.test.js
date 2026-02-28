@@ -128,11 +128,10 @@ describe('Test the `typeInfo()` function for function values', () => {
   }
 
   test('function with null constructor', () => {
-    const f = function () {};
+    const f = function f() {};
     Object.defineProperty(f, 'constructor', { value: null, configurable: true });
     const result = typeInfo(f);
     expect(result.subtype).toBe('Function');
     expect(result.category).toBe('function');
   });
 });
-

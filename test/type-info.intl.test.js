@@ -298,4 +298,3 @@ describe('Test the `typeInfo()` function for objects under the Intl namespace', 
     expect(result.category).toBe('intl');
   });
 });
-
