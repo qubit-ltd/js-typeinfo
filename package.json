@@ -1,6 +1,6 @@
 {
   "name": "@qubit-ltd/typeinfo",
-  "version": "3.3.5",
+  "version": "3.3.6",
   "description": "A JavaScript library provides a type information detection function",
   "author": "Haixing Hu",
   "license": "Apache-2.0",
@@ -44,7 +44,7 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7.28.4",
-    "@qubit-ltd/type-detect": "^2.2.3"
+    "@qubit-ltd/type-detect": "^2.2.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.28.3",
@@ -57,7 +57,7 @@
     "@qubit-ltd/eslint-config": "^2.0.0",
     "@qubit-ltd/jsdoc-theme": "^1.5.1",
     "@qubit-ltd/rollup-builder": "^1.8.12",
-    "@qubit-ltd/type-detect": "^2.2.3",
+    "@qubit-ltd/type-detect": "^2.2.6",
     "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.6",

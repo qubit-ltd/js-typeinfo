@@ -2431,12 +2431,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@qubit-ltd/type-detect@npm:^2.2.3":
-  version: 2.2.3
-  resolution: "@qubit-ltd/type-detect@npm:2.2.3"
+"@qubit-ltd/type-detect@npm:^2.2.6":
+  version: 2.2.6
+  resolution: "@qubit-ltd/type-detect@npm:2.2.6"
   peerDependencies:
     "@babel/runtime": ^7.26.0
-  checksum: 8c8becdbd019bd5435e9145806b68bfa8f85193a759714984d1207ee174235bbfd520d1d1ba788a066675c99a053eb836543498f863400ecfeff17a78dbe5e94
+  checksum: dad531f32e6f2f5911ffb22a686cddabae46c2eeec265c0bad146a92a4b5dc482babc4969dad20e3e025b5cc4504374e15bb36bf9d9991f2a30b4a73fb3579bc
   languageName: node
   linkType: hard
 
@@ -2454,7 +2454,7 @@ __metadata:
     "@qubit-ltd/eslint-config": "npm:^2.0.0"
     "@qubit-ltd/jsdoc-theme": "npm:^1.5.1"
     "@qubit-ltd/rollup-builder": "npm:^1.8.12"
-    "@qubit-ltd/type-detect": "npm:^2.2.3"
+    "@qubit-ltd/type-detect": "npm:^2.2.6"
     "@rollup/plugin-alias": "npm:^5.1.1"
     "@rollup/plugin-babel": "npm:^6.0.4"
     "@rollup/plugin-commonjs": "npm:^28.0.6"
@@ -2479,7 +2479,7 @@ __metadata:
     typescript: "npm:^5.9.2"
   peerDependencies:
     "@babel/runtime": ^7.28.4
-    "@qubit-ltd/type-detect": ^2.2.3
+    "@qubit-ltd/type-detect": ^2.2.6
   languageName: unknown
   linkType: soft
 
