@@ -94,4 +94,18 @@ describe('Test the `typeInfo()` function for plain object', () => {
     expect(result.isWebApi).toBe(false);
     expect(result.constructor).toBeDefined();
   });
+
+  test('object with null prototype', () => {
+    const expected = {
+      type: 'object',
+      subtype: 'Object',
+      category: 'object',
+      isPrimitive: false,
+      isBuiltIn: false,
+      isWebApi: false,
+      constructor: undefined,
+    };
+    const obj = Object.create(null);
+    expect(typeInfo(obj)).toEqual(expected);
+  });
 });

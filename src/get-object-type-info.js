@@ -21,7 +21,7 @@ import { getTypeName, isArguments, isConsole, isCssom, isDom, isEvent, isFile } 
 function getObjectTypeInfo(value) {
   const result = {
     type: 'object',
-    subtype: value.constructor?.name,
+    subtype: value.constructor?.name || '',
     category: '',
     isPrimitive: false,
     isBuiltIn: true,
@@ -84,10 +84,8 @@ function getObjectTypeInfo(value) {
       result.category = 'promise';
       return result;
     case '[object Error]':
-      // the customized Error object also has the toStringTag of '[object Error]'
-      // so we need to check the constructor of the object
       result.category = 'error';
-      switch (result.subtype) { // check its constructor name
+      switch (result.subtype) {
         case 'Error':
         case 'EvalError':
         case 'RangeError':
@@ -99,7 +97,6 @@ function getObjectTypeInfo(value) {
         case 'InternalError':
           break;
         default:
-          // it is a customized Error object
           result.isBuiltIn = false;
           break;
       }
@@ -114,8 +111,9 @@ function getObjectTypeInfo(value) {
     case '[object Intl.PluralRules]':
     case '[object Intl.RelativeTimeFormat]':
     case '[object Intl.Segmenter]':
-      // add 'Intl.' prefix to the constructor name of the object
-      result.subtype = `Intl.${value.constructor.name}`;
+      if (value.constructor) {
+        result.subtype = `Intl.${value.constructor.name}`;
+      }
       result.category = 'intl';
       return result;
     case '[object Map Iterator]':
@@ -124,25 +122,23 @@ function getObjectTypeInfo(value) {
     case '[object String Iterator]':
     case '[object RegExp String Iterator]':
     case '[object Segmenter String Iterator]':
-      // removes the spaces in the toStringTag of the object.
-      // for example, the '[object Map Iterator]' becomes 'MapIterator'.
-      result.subtype = value[Symbol.toStringTag].replace(/\s/g, '');
+      result.subtype = str.slice(8, -1).replace(/\s/g, '');
       result.category = 'iterator';
       return result;
     case '[object FinalizationRegistry]':
       result.subtype = 'FinalizationRegistry';
       result.category = 'finalization-registry';
       return result;
-    default:                                 // drop down
+    default:
       break;
   }
 
-  if (isArguments(value)) {                  // arguments
+  if (isArguments(value)) {
     result.subtype = 'Arguments';
     result.category = 'arguments';
     return result;
   }
-  // other non-built-in objects
+
   result.isBuiltIn = false;
   const typeName = getTypeName(value);
   if (isEvent(value)) {
@@ -165,18 +161,13 @@ function getObjectTypeInfo(value) {
     result.category = 'file';
     result.isWebApi = true;
     result.subtype = typeName;
-  } else if (/Generator$/.test(typeName)) {
+  } else if (typeName.endsWith('Generator')) {
     result.category = 'generator';
     result.subtype = typeName;
-  } else if (result.subtype === 'Object') {
-    // If the value is a instance of Object and has a customized toStringTag
-    // its subtype is not `'Object'` but its constructor is `Object`
+  } else if (result.subtype === 'Object' || (result.subtype === '' && !value.constructor)) {
     result.category = 'object';
     result.subtype = typeName;
   } else {
-    // If the value is a instance of a anonymous class, its constructor name
-    // is "" (empty string), we should use the '' as its subtype and use
-    // "class" as its category
     result.category = 'class';
     result.subtype = typeName;
   }
