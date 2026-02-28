@@ -1,6 +1,6 @@
 {
   "name": "@qubit-ltd/typeinfo",
-  "version": "3.3.4",
+  "version": "3.3.5",
   "description": "A JavaScript library provides a type information detection function",
   "author": "Haixing Hu",
   "license": "Apache-2.0",
