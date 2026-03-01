@@ -2601,20 +2601,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@qubit-ltd/eslint-config@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@qubit-ltd/eslint-config@npm:2.0.0"
+"@qubit-ltd/eslint-config@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@qubit-ltd/eslint-config@npm:2.0.1"
   dependencies:
     "@eslint/js": "npm:^9.35.0"
     eslint: "npm:^9.35.0"
     eslint-plugin-import: "npm:^2.31.0"
-  checksum: 428972d20dcde8b947af4dd10644a51d3f2e9a9f6cea43f71e35362a339fd764ac8cf539d6c4f8297ba70cccd674acb55d809493976c657deb50e5cf169cdde6
+  checksum: 568956019d4766c17f46a0758638c879d6ad2a8c88ebd5a015a7140d4cb1477ef181a6ca52cd8a35d78f1c0de47b632c5a0c50bc45063a21d519e49aeba09eb6
   languageName: node
   linkType: hard
 
-"@qubit-ltd/jsdoc-theme@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "@qubit-ltd/jsdoc-theme@npm:1.5.1"
+"@qubit-ltd/jsdoc-theme@npm:^1.5.2":
+  version: 1.5.2
+  resolution: "@qubit-ltd/jsdoc-theme@npm:1.5.2"
   dependencies:
     "@jsdoc/salty": "npm:^0.2.4"
     fs-extra: "npm:^10.1.0"
@@ -2624,13 +2624,13 @@ __metadata:
     showdown: "npm:^2.1.0"
   peerDependencies:
     jsdoc: ">=3.x <=4.x"
-  checksum: 1dc139d52b18318e319440cb1ead6c22fac756401d294169ce2ccc0bbd4c8e87c57fa4efb7fb785030e01e2cc279dd8446254d85d466f60ddd038757e5331a43
+  checksum: c77ada44b7cd283259ff0801103900eb373639ec2332a3a8bf2f292246f68828e1ae9df266282ee01ee4fb659226e3c254090bb751d1fa1e0efdcea14c921df1
   languageName: node
   linkType: hard
 
-"@qubit-ltd/rollup-builder@npm:^1.8.13":
-  version: 1.8.13
-  resolution: "@qubit-ltd/rollup-builder@npm:1.8.13"
+"@qubit-ltd/rollup-builder@npm:^1.8.14":
+  version: 1.8.14
+  resolution: "@qubit-ltd/rollup-builder@npm:1.8.14"
   peerDependencies:
     "@babel/core": ^7.28.5
     "@babel/plugin-transform-runtime": ^7.28.5
@@ -2645,16 +2645,16 @@ __metadata:
     rollup: ^4.53.3
     rollup-plugin-analyzer: ^4.0.0
     rollup-plugin-visualizer: ^6.0.5
-  checksum: b033bf3a466856f6f78e3866fe0b7ce3e3885734eb7359abfdc61da7e4067bbe57c8b7f6321b70a0a24b29cac4ba5b443097c1b6d4295f15a114f5d667c0087a
+  checksum: dad45782af905bae72b2e1394b43d6763362eccc70f5519773ff1c8ba79ca816880ef1259ef64113721035c7fca49f1602c465738b06848775629ccf6fc02c3c
   languageName: node
   linkType: hard
 
-"@qubit-ltd/type-detect@npm:^2.2.7":
-  version: 2.2.7
-  resolution: "@qubit-ltd/type-detect@npm:2.2.7"
+"@qubit-ltd/type-detect@npm:^2.2.8":
+  version: 2.2.8
+  resolution: "@qubit-ltd/type-detect@npm:2.2.8"
   peerDependencies:
     "@babel/runtime": ^7.26.0
-  checksum: 60a7e153a9d719aa9d4883abfb68c09a336b6dd8b821fa3860fd46c77a9042b5b38c4258d4a1ce1e2b89000c41dfd2f18915320ac0efdba71a7b5fc3f307ea6e
+  checksum: b40dbf6398f1921781d69a87155086ce2d7bdd933e24639e1ea674c088da9d3dabefa8aaf93b8d5d6ca1fcf513dc95b6176995c19d8db2f9b1c4c4b7305fc77d
   languageName: node
   linkType: hard
 
@@ -2669,10 +2669,10 @@ __metadata:
     "@babel/preset-env": "npm:^7.28.5"
     "@babel/runtime": "npm:^7.28.4"
     "@jest/core": "npm:^30.1.3"
-    "@qubit-ltd/eslint-config": "npm:^2.0.0"
-    "@qubit-ltd/jsdoc-theme": "npm:^1.5.1"
-    "@qubit-ltd/rollup-builder": "npm:^1.8.13"
-    "@qubit-ltd/type-detect": "npm:^2.2.7"
+    "@qubit-ltd/eslint-config": "npm:^2.0.1"
+    "@qubit-ltd/jsdoc-theme": "npm:^1.5.2"
+    "@qubit-ltd/rollup-builder": "npm:^1.8.14"
+    "@qubit-ltd/type-detect": "npm:^2.2.8"
     "@rollup/plugin-alias": "npm:^6.0.0"
     "@rollup/plugin-babel": "npm:^6.1.0"
     "@rollup/plugin-commonjs": "npm:^29.0.0"
@@ -2697,7 +2697,7 @@ __metadata:
     typescript: "npm:^5.9.2"
   peerDependencies:
     "@babel/runtime": ^7.28.5
-    "@qubit-ltd/type-detect": ^2.2.7
+    "@qubit-ltd/type-detect": ^2.2.8
   languageName: unknown
   linkType: soft
 
